@@ -1,0 +1,337 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Libre Franklin', sans-serif;
+    background-color: #000; /* Black background for the body */
+    color: white;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Header Section */
+header {
+    padding: 30px 0;
+    background-color: #000;
+    height: 90px; /* Thinner header */
+    display: inline-block;
+    width: 100%;
+    position: relative;
+}
+
+.logo {
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    left: 20px;
+}
+
+.logo img {
+    width: auto;
+    height: 80px; /* Make logo slightly larger on desktop */
+    max-height: 100%; /* Ensure the logo doesn't go beyond the header */
+}
+
+nav {
+    display: inline-block;
+    position: absolute;
+    right: 20px; /* Align navigation to the right */
+    top: 50%;
+    transform: translateY(-50%); /* Vertically center the navigation */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2em;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    text-align: center;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5); /* Background for better text visibility */
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+}
+
+.hero-text h1 {
+    font-size: 2.9em;
+    margin: 0;
+}
+
+.hero-text p {
+    font-size: 1.05em;
+}
+
+.buy-now {
+    background-color: #866db4;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.25rem;
+    font-size: 0.95em;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.buy-now:hover {
+    background-color: #6f5699; /* Change background color on hover */
+}
+
+/* Updates Section */
+.updates {
+    padding: 3rem;
+    text-align: center;
+    background-color: #90869F;
+    color: white;
+}
+
+.updates h2 {
+    font-size: 2rem;
+}
+
+.update-text {
+    margin: 1.5rem 0;
+}
+
+.update-text p {
+    margin: 2rem 0;
+}
+
+.updates {
+    font-size: 1.05rem;
+}
+
+/* Cards Section */
+.cards {
+    width: 100%;
+    text-align: center;
+    padding: 2rem 0;
+    background-color: #3B3939;
+}
+
+.card {
+    display: inline-block;
+    background-color: white;
+    color: #3B3939;
+    width: 22%;
+    height: auto;
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 10px;
+    margin: 0 1%;
+    vertical-align: top;
+    min-height: 350px; /* Ensure all cards have the same minimum height */
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.card h3 {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+.card a {
+    text-decoration: none;
+    color: #3B3939;
+}
+
+/* Store Section */
+.store {
+    padding: 3rem;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.store h2 {
+    margin-bottom: 2rem;
+}
+
+.store-item {
+    display: inline-block;
+    width: 22%;
+    text-align: center;
+    margin: 1%;
+}
+
+.store-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.shop-button {
+    background-color: #b8a9d3;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.shop-button:hover {
+    background-color: #9c83bb;
+}
+
+.shop-button a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Footer */
+footer {
+    background-color: #3B3939;
+    text-align: center;
+    padding: 2rem;
+    color: white;
+}
+
+/* Media Queries */
+
+/* Tablet View (768px to 1024px) */
+@media (max-width: 1024px) {
+    header {
+        height: 100px; /* Adjust header height */
+    }
+
+    nav {
+        right: 10px; /* Adjust navigation for tablet */
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem; /* Smaller heading size for tablets */
+    }
+
+    .updates {
+        padding: 2rem;
+    }
+
+    .card {
+        width: 30%; /* Ensure each card takes up 30% of the container */
+        display: inline-block; /* Keep cards in the same line */
+        vertical-align: top; /* Align the cards to the top */
+        margin: 1%; /* Add margin to space them evenly */
+        min-height: 350px; /* Ensure equal height for all cards */
+    }
+
+    .store-item {
+        width: 30%;
+    }
+}
+
+/* Mobile View (Up to 767px) */
+@media (max-width: 767px) {
+    body {
+        font-size: 0.8rem; /* Adjust the body text size for mobile */
+    }
+
+    header {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .logo {
+        display: block;
+        margin-bottom: 0.7rem;
+        text-align: center;
+    }
+
+    nav {
+        float: none;
+        text-align: center;
+    }
+
+    /* Horizontal navigation for mobile */
+    nav ul {
+        display: inline-block;
+        width: 100%; /* Full width to ensure horizontal scrolling */
+        text-align: center;
+    }
+
+    nav ul li {
+        display: inline-block;
+        margin-right: 10px;
+        margin-bottom: 5px; /* Add some margin for spacing */
+        width: auto; /* Adjust width to auto */
+    }
+
+    nav ul li a {
+        font-size: 0.9rem;
+        padding: 10px;
+        display: inline-block;
+        color: white;
+        background-color: transparent; /* Remove background */
+        border-radius: 0; /* Remove button styling */
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    .buy-now {
+        padding: 0.5rem 1rem;
+    }
+
+    .updates {
+        padding: 2rem;
+        font-size: 0.8rem; /* Smaller font size for the updates section on mobile */
+    }
+
+    /* Adjust card size to be smaller */
+    .card {
+        width: 70%; /* Smaller width on mobile */
+        margin: 1rem auto;
+        min-height: auto; /* Remove fixed height on mobile */
+    }
+
+    /* Store items: 2 per row, smaller images */
+    .store-item {
+        width: 40%; /* Smaller width for store items */
+        margin: 1rem;
+        display: inline-block; /* Keep items inline */
+    }
+
+    footer {
+        padding: 1.5rem;
+        font-size: 0.9rem;
+    }
+}
