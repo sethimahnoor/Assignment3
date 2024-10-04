@@ -1,21 +1,21 @@
-/* General Styles */
+/* Applying general styling */
 body {
     margin: 0;
     padding: 0;
     font-family: 'Libre Franklin', sans-serif;
-    background-color: #000; /* Black background for the body */
+    background-color: #000; 
     color: white;
 }
 
 h1, h2, h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', serif; /* I chose this particular font because I found it to be similar to that on Taylor Swift's website */
 }
 
-/* Header Section */
+/* Header */
 header {
     padding: 30px 0;
     background-color: #000;
-    height: 90px; /* Thinner header */
+    height: 90px; 
     display: inline-block;
     width: 100%;
     position: relative;
@@ -30,16 +30,25 @@ header {
 
 .logo img {
     width: auto;
-    height: 80px; /* Make logo slightly larger on desktop */
-    max-height: 100%; /* Ensure the logo doesn't go beyond the header */
+    height: 80px; 
+    max-height: 100%; /*to ensure that the logo does not go beyond the header*/
 }
+
+.ticket-image {
+    width: 100%;
+    height: auto;
+    max-width: 1200px; /* Adjust max width as needed */
+    max-height: 700px;  /* Adjust max height as needed */
+    object-fit: cover;  /* Ensures the image covers the container without distortion */
+}
+
 
 nav {
     display: inline-block;
     position: absolute;
-    right: 20px; /* Align navigation to the right */
+    right: 20px; 
     top: 50%;
-    transform: translateY(-50%); /* Vertically center the navigation */
+    transform: translateY(-50%); /* I did this to vrtically center the navigation */
 }
 
 nav ul {
@@ -60,33 +69,34 @@ nav ul li a {
     font-size: 1.2em;
 }
 
-/* Hero Section */
-.hero-section {
+/* Ticket purchase section */
+.ticket-section {
+    width: 100%;
     position: relative;
     text-align: center;
 }
 
-.hero-image {
+.ticket-image {
     width: 100%;
     height: auto;
 }
 
-.hero-text {
+.ticket-text {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.5); /* Background for better text visibility */
+    background: rgba(0, 0, 0, 0.5); /* Added a background so that the text was visible on top of the image */
     padding: 1.5rem;
     border-radius: 1.5rem;
 }
 
-.hero-text h1 {
+.ticket-text h1 {
     font-size: 2.9em;
     margin: 0;
 }
 
-.hero-text p {
+.ticket-text p {
     font-size: 1.05em;
 }
 
@@ -97,8 +107,6 @@ nav ul li a {
     padding: 0.75rem 1.25rem;
     font-size: 0.95em;
     border-radius: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
 }
 
 .buy-now:hover {
@@ -129,7 +137,7 @@ nav ul li a {
     font-size: 1.05rem;
 }
 
-/* Cards Section */
+/* Cards Section - This has cards for Tour Dates  & Locations, VIP Experiences, Setlist and Appearences*/
 .cards {
     width: 100%;
     text-align: center;
@@ -148,7 +156,7 @@ nav ul li a {
     border-radius: 10px;
     margin: 0 1%;
     vertical-align: top;
-    min-height: 350px; /* Ensure all cards have the same minimum height */
+    min-height: 350px; /* This was to ensure that all cards have the same minimum height */
 }
 
 .card img {
@@ -198,9 +206,7 @@ nav ul li a {
     border: none;
     padding: 0.5rem;
     margin-top: 1rem;
-    cursor: pointer;
     border-radius: 0.5rem;
-    transition: background-color 0.3s ease-in-out;
 }
 
 .shop-button:hover {
@@ -225,15 +231,15 @@ footer {
 /* Tablet View (768px to 1024px) */
 @media (max-width: 1024px) {
     header {
-        height: 100px; /* Adjust header height */
+        height: 100px; 
     }
 
     nav {
-        right: 10px; /* Adjust navigation for tablet */
+        right: 10px; /* This was to adjust navigation for tablet */
     }
 
-    .hero-text h1 {
-        font-size: 2.2rem; /* Smaller heading size for tablets */
+    .ticket-text h1 {
+        font-size: 2.2rem; /* I made the heading a smaller size for tablets */
     }
 
     .updates {
@@ -242,10 +248,10 @@ footer {
 
     .card {
         width: 30%; /* Ensure each card takes up 30% of the container */
-        display: inline-block; /* Keep cards in the same line */
-        vertical-align: top; /* Align the cards to the top */
-        margin: 1%; /* Add margin to space them evenly */
-        min-height: 350px; /* Ensure equal height for all cards */
+        display: inline-block; /* To keep cards in the same line */
+        vertical-align: top; 
+        margin: 1%; /* To add margin to space them evenly */
+        min-height: 350px; /* To ensure equal height for all cards */
     }
 
     .store-item {
@@ -256,7 +262,7 @@ footer {
 /* Mobile View (Up to 767px) */
 @media (max-width: 767px) {
     body {
-        font-size: 0.8rem; /* Adjust the body text size for mobile */
+        font-size: 0.8rem; 
     }
 
     header {
@@ -275,34 +281,33 @@ footer {
         text-align: center;
     }
 
-    /* Horizontal navigation for mobile */
+    
     nav ul {
         display: inline-block;
-        width: 100%; /* Full width to ensure horizontal scrolling */
+        width: 100%; 
         text-align: center;
     }
 
     nav ul li {
         display: inline-block;
         margin-right: 10px;
-        margin-bottom: 5px; /* Add some margin for spacing */
-        width: auto; /* Adjust width to auto */
+        margin-bottom: 5px; 
+        width: auto; 
     }
-
     nav ul li a {
         font-size: 0.9rem;
         padding: 10px;
         display: inline-block;
         color: white;
-        background-color: transparent; /* Remove background */
-        border-radius: 0; /* Remove button styling */
+        background-color: transparent; 
+        border-radius: 0; 
     }
 
-    .hero-text h1 {
+    .ticket-text h1 {
         font-size: 2rem;
     }
 
-    .hero-text {
+    .ticket-text {
         width: 90%;
         padding: 1rem;
     }
@@ -323,7 +328,7 @@ footer {
         min-height: auto; /* Remove fixed height on mobile */
     }
 
-    /* Store items: 2 per row, smaller images */
+    /* Store items: 2 per row */
     .store-item {
         width: 40%; /* Smaller width for store items */
         margin: 1rem;
